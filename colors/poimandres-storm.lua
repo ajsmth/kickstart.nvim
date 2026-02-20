@@ -131,3 +131,68 @@ hi('DiffDelete', { fg = colors.pink3 })
 hi('TabLine', { fg = colors.blueGray2, bg = colors.bg })
 hi('TabLineSel', { fg = colors.fg_bright, bg = colors.blueGray3, bold = true })
 hi('TabLineFill', { bg = colors.bg })
+
+-- ======================
+-- Tree-sitter (TypeScript etc.)
+-- ======================
+hi('@comment', { fg = colors.blueGray2 })
+
+-- Variables / constants
+hi('@variable', { fg = colors.blue3 })
+hi('@variable.builtin', { fg = colors.blue3 })
+hi('typescriptVariable', { fg = colors.teal1 }) -- or colors.blue2 / teal1, your call
+
+hi('@constant', { fg = colors.teal1 })
+hi('@constant.builtin', { fg = colors.teal1 })
+hi('@constant.macro', { fg = colors.teal2 })
+
+-- Literals
+hi('@string', { fg = colors.teal1 })
+hi('@string.escape', { fg = colors.pink2 })
+hi('@number', { fg = colors.teal1 })
+hi('@boolean', { fg = colors.pink3 })
+
+-- Keywords / operators
+hi('@keyword', { fg = colors.blueGray1 })
+hi('@keyword.function', { fg = colors.blueGray1 })
+hi('@operator', { fg = colors.blue3 })
+hi('@punctuation.delimiter', { fg = colors.blueGray1 })
+hi('@punctuation.bracket', { fg = colors.blueGray1 })
+
+-- Functions / types / properties
+hi('@function', { fg = colors.blue2 })
+hi('@function.builtin', { fg = colors.blue2 })
+hi('@type', { fg = colors.blueGray1 })
+hi('@type.builtin', { fg = colors.blueGray1 })
+hi('@property', { fg = colors.fg_bright })
+hi('@field', { fg = colors.fg_bright })
+hi('@parameter', { fg = colors.fg_bright })
+
+-- ======================
+-- TypeScript (vim syntax groups)
+-- ======================
+
+-- Keywords / statements
+hi('typescriptStatementKeyword', { fg = colors.teal1 }) -- const/let/return/etc.
+hi('typescriptKeyword', { fg = colors.blueGray1 })
+hi('typescriptConditional', { fg = colors.blueGray1 })
+hi('typescriptRepeat', { fg = colors.blueGray1 })
+hi('typescriptException', { fg = colors.pink3 }) -- try/catch/throw-ish (varies by plugin)
+
+-- Declarations / identifiers
+hi('typescriptVariable', { fg = colors.teal1 }) -- stops “white variables”
+hi('typescriptIdentifierName', { fg = colors.fg_bright }) -- if your plugin provides this
+hi('typescriptFuncName', { fg = colors.blue2 })
+hi('typescriptFuncKeyword', { fg = colors.blueGray1 }) -- function/async (varies)
+hi('typescriptTypeReference', { fg = colors.blueGray1 })
+hi('typescriptTypeParameter', { fg = colors.blueGray1 })
+
+-- Punctuation / operators
+hi('typescriptOperator', { fg = colors.blue3 })
+hi('typescriptBinaryOp', { fg = colors.blue3 })
+hi('typescriptAssign', { fg = colors.blue3 })
+
+-- Literals
+hi('typescriptString', { fg = colors.teal1 })
+hi('typescriptNumber', { fg = colors.teal1 })
+hi('typescriptBoolean', { fg = colors.pink3 })
